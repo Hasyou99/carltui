@@ -2,20 +2,42 @@
 
 > a components for carlt
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+## 特性
 
-# serve with hot reload at localhost:8080
-npm run dev
+- 基于 `Vue` 开发的 UI 组件
+- 使用 npm + webpack + babel 的工作流，支持 ES2015
+- 提供友好的 API，可灵活的使用组件
 
-# build for production with minification
-npm run build
+## 浏览器支持
 
-# build for production and view the bundle analyzer report
-npm run build --report
+- 现代浏览器和 IE9 及以上
+- [Electron](http://electron.atom.io/)
+- [NW.js](http://nwjs.io)
+
+## 安装
+
+- yarn
+
+```bash
+yarn add carltui
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- npm 
+
+```bash
+npm install carltui --save
+```
+
+## 使用
+
+```js
+import carltUI from 'carltui' // 引入组件库
+import 'carltui/packages/theme-default/lib/index.css' // 引入样式库
+
+Vue.use(carltUI)
+```
+
+## 贡献
+
+如果你在使用 `carlt-UI` 时遇到问题，或者有好的建议，欢迎给我们提问题；
