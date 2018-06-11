@@ -43,7 +43,7 @@
         </div>
 
         <h3>参数说明</h3>
-        <table class="table">
+        <table class="c_table">
             <thead>
                 <th>参数</th>
                 <th>说明</th>

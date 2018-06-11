@@ -5,7 +5,7 @@
 
 ## 特性
 
-- 基于 `Vue` 开发的 UI 组件
+- 基于 `Vue` 开发的 UI 组件库
 - 使用 npm + webpack + babel 的工作流，支持 ES2015
 - 提供友好的 API，可灵活的使用组件
 
@@ -21,7 +21,7 @@
 
 ```bash
 yarn add carltui
-```
+```  
 
 - npm 
 

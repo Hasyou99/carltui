@@ -5,11 +5,18 @@
 import Message from './message/index.js';
 import cButton from './button/index';
 import cNotice from './notice/index';
+import cRadio from './radio/index';
+import cTreeGird from './tree-gird/index';
+import cSelect from './select/index';
 
 const components = [
     Message,
     cButton,
     cNotice,
+    cRadio,
+    cTreeGird,
+    cSelect
+
 ]
 
 const install = function(Vue) {
@@ -28,4 +35,7 @@ export default {
     Message,
     cButton,
     cNotice,
+    cRadio,
+    cTreeGird,
+    cSelect
 }

@@ -21,6 +21,11 @@
                     "desc": "Button",
                     "name": "button",
                     "path": "/button"
+                },
+                {
+                    "desc": "Radio",
+                    "name": "radio",
+                    "path": "/radio"
                 }
             ]
         },
@@ -31,6 +36,14 @@
                 "desc": "Notice && Modal",
                 "name": "notice",
                 "path": "/notice"
+            }, {
+                "desc": "TreeGird 树形表格",
+                "name": "treegird",
+                "path": "/treegird"
+            }, {
+                "desc": "Select",
+                "name": "select",
+                "path": "/select"
             }]
         }
     ]
