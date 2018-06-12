@@ -8,6 +8,7 @@ import cNotice from './notice/index';
 import cRadio from './radio/index';
 import cTreeGird from './tree-gird/index';
 import cSelect from './select/index';
+import cInputNumber from './input-number/index';
 
 const components = [
     Message,
@@ -15,7 +16,8 @@ const components = [
     cNotice,
     cRadio,
     cTreeGird,
-    cSelect
+    cSelect,
+    cInputNumber
 
 ]
 
@@ -37,5 +39,6 @@ export default {
     cNotice,
     cRadio,
     cTreeGird,
-    cSelect
+    cSelect,
+    cInputNumber
 }

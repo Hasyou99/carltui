@@ -1,6 +1,8 @@
 
 <template>
     <div>
+        <h3>说明</h3>
+        <div>此ui组件库仅适合卡尔特公司ui规范及其功能需求，封装功能较简单，若有需要，请下载源码后自行添加其他深入功能</div>
         <h3>安装</h3>
 
         <div>
@@ -10,11 +12,11 @@
         </div>
 
         <h3>在main.js中使用</h3>
-        <div>
+        <code>
             <p>import carltUI from 'carltui'</p>
             <p>import '../packages/theme-default/lib/index.css'</p>
             <p>Vue.use(carltUI)</p>
-        </div>
+        </code>
 
     </div>
 </template>

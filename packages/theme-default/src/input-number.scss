@@ -1,0 +1,46 @@
+.c_input-number {
+    height: 32px;
+    margin: 0;
+    display: flex;
+    .c_input-number-btn {
+        height: 100%;
+        display: inline-block;
+        line-height: 32px;
+        border: 1px solid #999;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin: 0;
+        cursor: pointer;
+        background-color: #c0c4cc;
+        &.is-disabled {
+            cursor: not-allowed;
+            background-color: #dcdfe6;
+        }
+        &.c-icon-jianhao {
+            border-right: none;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        &.c-icon-jiahao1 {
+            border-left: none;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+    }
+    .c_input-number-origal {
+        height: 32px;
+        margin: 0;
+        box-sizing: border-box;
+        border: 1px solid #999;
+        padding: 2px 5px;
+        text-align: center;
+        width: 70px;
+        &:focus {
+            border: none
+        }
+        &.is-disabled {
+            cursor: not-allowed;
+            background-color: #dcdfe6;
+        }
+    }
+}
