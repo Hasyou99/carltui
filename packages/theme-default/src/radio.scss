@@ -35,8 +35,9 @@
             width: 60%;
             height: 60%;
         }
-        &:focus+label>.input-box {
+        &:checked+label>.input-box {
             box-shadow: 0 0 1px 1px #73b9ff;
+            border: 1px solid #3696f7;
         }
         &:disabled+label {
             opacity: 0.6;

@@ -3,23 +3,29 @@
         <h3>Radio 单选框</h3>
 
         <div>
-           <c-radio name="robot" value="I'm a robot" v-model="radio">
+            <c-checkbox v-model="checkbox"></c-checkbox>
+        </div>
+        <div>
+           <c-checkbox name="" value="I'm a robot" v-model="checkbox" className="inputbox">
+               <span slot="input-box">
+                    [..]
+                </span>
                 I'm a robot
-            </c-radio>
-            <c-radio name="robot" value="0" disabled>
+            </c-checkbox>
+            <c-checkbox name="" value="0" disabled>
                 I'm not a robot
-            </c-radio>
-            <c-radio name="robot" value="1" v-model="radio">
+            </c-checkbox>
+            <c-checkbox name="robot" value="1" v-model="checkbox">
                 1
-            </c-radio>
-            <c-radio name="robot" value="2" v-model="radio">
+            </c-checkbox>
+            <c-checkbox name="robot" value="2" v-model="checkbox">
                 2
-            </c-radio>
-            <c-radio name="robot" value="3" v-model="radio">
+            </c-checkbox>
+            <c-checkbox name="robot" value="3" v-model="checkbox">
                 3
-            </c-radio>
+            </c-checkbox>
 
-           <span>v-model绑定后的值：</span> {{radio}}.
+           <div>v-model绑定后的值：{{checkbox}}.</div> 
         </div>
 
        
@@ -52,14 +58,14 @@ let data = [
     desc: "id",
     type: "string",
     select: "--",
-    default: "--"
+    default: "checkbox-id-(_uid)"
   },
   {
     name: "name",
-    desc: "名字，用于单选",
+    desc: "名字，用于多选",
     type: "string",
     select: "--",
-    default: null
+    default: 'null'
   },
   {
     name: "v-model",
@@ -95,18 +101,29 @@ let data = [
     type: "boolean",
     select: "--",
     default: "false"
+  },
+  {
+    name: "slot='input-box'",
+    desc: "插槽，改变复选框的样式，可插入任意样式",
+    type: "html||vue",
+    select: "--",
+    default: "null"
   }
 ];
 export default {
   data() {
     return {
       trdata: data,
-      radio:'1',
+      checkbox:["1"],
+      cname:''
     };
   },
   watch:{
-      radio(){
-          console.log(this.radio,'radio')
+      checkbox(){
+          console.log(this.checkbox,'checkbox')
+      },
+       cname(){
+          console.log(this.cname,'cname')
       }
   }
 };

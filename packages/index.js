@@ -9,7 +9,8 @@ import cRadio from './radio/index';
 import cTreeGird from './tree-gird/index';
 import cSelect from './select/index';
 import cInputNumber from './input-number/index';
-import cValidate from './validate'
+import cValidate from './validate';
+import cCheckbox from './checkbox';
 
 const components = [
     Message,
@@ -19,7 +20,8 @@ const components = [
     cTreeGird,
     cSelect,
     cInputNumber,
-    cValidate
+    cValidate,
+    cCheckbox
 ]
 
 const install = function(Vue) {
@@ -41,5 +43,7 @@ export default {
     cRadio,
     cTreeGird,
     cSelect,
-    cInputNumber
+    cInputNumber,
+    cValidate,
+    cCheckbox,
 }

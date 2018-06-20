@@ -5,7 +5,6 @@
                :id="id"
                :name="name"
                :value="value"
-               :class="className"
                :required="required"
                :disabled="disabled"
                @change="onChange"
@@ -44,10 +43,6 @@
             },
             modelValue: {
                 default: undefined,
-            },
-            className: {
-                type: String,
-                default: null,
             },
             checked: {
                 type: Boolean,

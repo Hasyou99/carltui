@@ -26,6 +26,11 @@
                     "desc": "Radio",
                     "name": "radio",
                     "path": "/radio"
+                },
+                {
+                    "desc": "Checkbox",
+                    "name": "checkbox",
+                    "path": "/checkbox"
                 }
             ]
         },
@@ -48,8 +53,8 @@
                 "desc": "inputNumber",
                 "name": "inputnumber",
                 "path": "/inputnumber"
-            },{
-                "desc":"validate",
+            }, {
+                "desc": "validate",
                 "name": "validate",
                 "path": "/v"
             }]
