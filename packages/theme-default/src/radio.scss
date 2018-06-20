@@ -1,114 +1,46 @@
 .c_radio {
-    color: #333;
-    font-weight: 200;
-    line-height: 1;
     position: relative;
-    cursor: pointer;
-    display: inline-block;
-    white-space: nowrap;
-    outline: none;
-    font-size: 14px;
-    &+.c_radio {
-        margin-left: 30px;
-    }
-    .c_radio__input {
-        white-space: nowrap;
-        cursor: pointer;
-        outline: none;
-        display: inline-block;
-        line-height: 1;
-        position: relative;
-        vertical-align: middle;
-        .is-disabled {
-            .c_radio__inner {
-                background-color: #f5f7fa;
-                border-color: #f5f7fa;
-                cursor: not-allowed;
-                &::after {
-                    cursor: not-allowed;
-                    background-color: #f5f7fa;
-                }
-                &+.c_radio__label {
-                    cursor: not-allowed;
-                }
-            }
-            &.is-checked {
-                .c_radio__inner {
-                    background-color: #f5f7fa;
-                    border-color: #f5f7fa;
-                    &::after {
-                        background-color: #f5f7fa;
-                    }
-                }
-            }
-            &+span.c_radio__label {
-                color: #f5f7fa;
-                cursor: not-allowed;
-            }
-        }
-        .is-checked {
-            .c_radio__inner {
-                border-color: #409EFF;
-                background: #409EFF;
-                &::after {
-                    transform: translate(-50%, -50%) scale(1);
-                }
-            }
-            &+.c_radio__label {
-                color: #409EFF;
-            }
-        }
-        .is-focus {
-            .c_radio__inner {
-                border-color: #409EFF;
-            }
-        }
-    }
-    .c_radio__inner {
-        border: #409EFF;
-        border-radius: 50%;
-        width: 14px;
-        height: 14px;
-        background-color: #409EFF;
-        position: relative;
-        cursor: pointer;
-        display: inline-block;
-        box-sizing: border-box;
-        &:hover {
-            border-color: #409EFF;
-        }
-        &::after {
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: #fff;
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform .15s ease-in;
-        }
-    }
-    .c_radio__original {
+    left: 0.5px;
+    top: 0.5px;
+    >input {
         opacity: 0;
-        outline: none;
         position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         margin: 0;
-    }
-    &:focus:not(.is-focus):not(:active) {
-        /*获得焦点时 样式提醒*/
-        .c_radio__inner {
-            box-shadow: 0 0 2px 2px #409EFF;
+        +label>.input-box {
+            display: inline-block;
+            border: 1px solid #333;
+            border-radius: 50%;
+            margin: 0;
+            padding: 0;
+            width: 14px;
+            height: 14px;
+            background: #fff;
+            overflow: hidden;
+            vertical-align: -5%;
+            user-select: none;
+            >.input-box-circle {
+                display: block;
+                margin: 50%;
+                width: 0%;
+                height: 0%;
+                background: #3696f7;
+                border-radius: 50%;
+                opacity: 0;
+                transition: width 0.15s ease-in, height 0.15s ease-in, margin 0.15s ease-in;
+            }
         }
-    }
-    .c_radio__label {
-        font-size: 14px;
-        padding-left: 10px;
+        &:checked+label>.input-box>.input-box-circle {
+            opacity: 1;
+            margin: 20%;
+            width: 60%;
+            height: 60%;
+        }
+        &:focus+label>.input-box {
+            box-shadow: 0 0 1px 1px #73b9ff;
+        }
+        &:disabled+label {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
     }
 }

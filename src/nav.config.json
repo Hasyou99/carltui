@@ -43,11 +43,15 @@
             }, {
                 "desc": "Select",
                 "name": "select",
-                "path": "/select"
+                "path": "/s"
             }, {
                 "desc": "inputNumber",
                 "name": "inputnumber",
                 "path": "/inputnumber"
+            },{
+                "desc":"validate",
+                "name": "validate",
+                "path": "/v"
             }]
         }
     ]

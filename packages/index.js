@@ -9,6 +9,7 @@ import cRadio from './radio/index';
 import cTreeGird from './tree-gird/index';
 import cSelect from './select/index';
 import cInputNumber from './input-number/index';
+import cValidate from './validate'
 
 const components = [
     Message,
@@ -17,8 +18,8 @@ const components = [
     cRadio,
     cTreeGird,
     cSelect,
-    cInputNumber
-
+    cInputNumber,
+    cValidate
 ]
 
 const install = function(Vue) {
