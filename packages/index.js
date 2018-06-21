@@ -11,6 +11,7 @@ import cSelect from './select/index';
 import cInputNumber from './input-number/index';
 import cValidate from './validate';
 import cCheckbox from './checkbox';
+import cTooltip from './tooltip';
 
 const components = [
     Message,
@@ -21,14 +22,15 @@ const components = [
     cSelect,
     cInputNumber,
     cValidate,
-    cCheckbox
+    cCheckbox,
+    cTooltip
 ]
 
 const install = function(Vue) {
     if (install.installed) return
     components.map(component => Vue.component(component.name, component))
 
-    Vue.prototype.$message = Message
+    Vue.prototype.$message = Message;
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -46,4 +48,5 @@ export default {
     cInputNumber,
     cValidate,
     cCheckbox,
+    cTooltip
 }

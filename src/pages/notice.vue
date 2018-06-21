@@ -2,8 +2,15 @@
     <div>
         <h3>Notice  &&  Modal</h3>
 
+        <h4>notice 警告类弹窗</h4>
+        <p>功能：常用于提示类操作，如确认删除？确认废除等</p>
         <div>
             <c-button type='primary' @click="getNotice" >notice</c-button>
+        </div>
+
+        <h4>modal 弹出框</h4>
+        <p>功能：常用于弹窗类交互</p>
+        <div>
             <c-button type='primary' @click="getModal" >modal</c-button>
         </div>
 

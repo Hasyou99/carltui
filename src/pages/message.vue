@@ -8,6 +8,8 @@
             <c-button type='error' @click="$message.error('错误提示')">删除按钮</c-button>
              <c-button type='warning' @click="$message.warning('警告提示')">警告按钮</c-button>
         </div>
+        <h3>使用场景</h3>
+        <div>常用于后台抛出错误类</div>
 
         <h3>使用规则</h3>
         <div>第一种：this.$message[type](options)</div>

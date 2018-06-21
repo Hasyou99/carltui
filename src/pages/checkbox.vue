@@ -1,24 +1,25 @@
 <template>
     <div>
-        <h3>Radio 单选框</h3>
+        <h3>Checkbox 复选框</h3>
 
+        <h4>1.基本用法</h4>
         <div>
-            <c-checkbox v-model="checkbox"></c-checkbox>
+            <c-checkbox v-model="cname">绑定的值选中与未选中状态在Boolean之间转换</c-checkbox>
+            <div>绑定的值：{{cname}}</div>
         </div>
+
+        <h4>2.绑定的值为数组时</h4>
         <div>
            <c-checkbox name="" value="I'm a robot" v-model="checkbox" className="inputbox">
-               <span slot="input-box">
-                    [..]
-                </span>
                 I'm a robot
             </c-checkbox>
             <c-checkbox name="" value="0" disabled>
                 I'm not a robot
             </c-checkbox>
-            <c-checkbox name="robot" value="1" v-model="checkbox">
+            <c-checkbox name="robot" value="1" v-model="checkbox" >
                 1
             </c-checkbox>
-            <c-checkbox name="robot" value="2" v-model="checkbox">
+            <c-checkbox name="robot" value="2" v-model="checkbox" checked>
                 2
             </c-checkbox>
             <c-checkbox name="robot" value="3" v-model="checkbox">
@@ -26,6 +27,16 @@
             </c-checkbox>
 
            <div>v-model绑定后的值：{{checkbox}}.</div> 
+        </div>
+
+         <h4>3.改变复选框的样式，可通过slot=‘input-box’插入</h4>
+        <div>
+           <c-checkbox name="" value="I'm a robot" v-model="star" >
+               <i slot="input-box" class="iconfont" :class="star?'c-icon-star-fill':'c-icon-star'"></i>
+                I'm a robot
+            </c-checkbox>
+    
+           <div>v-model绑定后的值：{{star}}.   以上通过slot插入iconfont的类来改变选中样式</div> 
         </div>
 
        
@@ -115,7 +126,8 @@ export default {
     return {
       trdata: data,
       checkbox:["1"],
-      cname:''
+      cname:false,
+      star:"",
     };
   },
   watch:{
